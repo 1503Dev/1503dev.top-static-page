@@ -123,4 +123,4 @@ features:
 
 <VPTeamMembers size="medium" :members />
 
-<!-- Made by Inkranty-->
+<!-- Made by Inkranty -->

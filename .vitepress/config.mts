@@ -13,7 +13,7 @@ export default defineConfig({
             // { icon: 'gmail', link: 'mailto:@1503dev.top' },
         ],
         footer: {
-            message: 'Powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>\n<!-- Made by Inkranty --></script>',
+            message: 'Powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>\n<!-- Made by Inkranty -->',
             copyright: 'Copyright © 2023-2025 <a href="https://1503dev.top">1503Dev</a>'
         }
     },
