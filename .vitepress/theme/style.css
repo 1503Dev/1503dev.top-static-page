@@ -1,0 +1,17 @@
+@font-face {
+    font-family: bunya;
+    src: url(https://static.1503dev.top/font/bunya/1.0/bunya-light.ttf);
+}
+@font-face {
+    font-family: jost;
+    src: url(https://static.1503dev.top/font/jost/3.3/jost-medium.otf);
+}
+
+.name.clip {
+    font-family: bunya;
+    font-style: bold;
+    font-size: 72px;
+}
+*, .wrapper .title .title {
+    font-family: jost;
+}
