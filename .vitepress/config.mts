@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
     title: "1503Dev",
-    description: "一个无聊的组织",
+    description: "一个棍母组织",
     themeConfig: {
         socialLinks: [
             { icon: 'github', link: 'https://github.com/1503Dev' },

@@ -32,6 +32,9 @@ features:
     const icon = {
         language: {
             svg: '<span class="vpi-social-icon" style="--icon: url(\'https://api.iconify.design/material-symbols/language.svg\');"></span>'
+        },
+        minebbs: {
+            svg: '<span class="vpi-social-minebbs" style="--icon: url(\'/src/icon/minebbs.svg\');"></span>'
         }
     }
 
@@ -43,12 +46,7 @@ features:
             links: [
                 { icon: 'github', link: 'https://github.com/thechuan1503' },
                 { icon: 'gitee', link: 'https://gitee.com/thechuan1503' },
-                {
-                    icon: {
-                        svg: '<span class="vpi-social-minebbs" style="--icon: url(\'/src/icon/minebbs.svg\');"></span>'
-                    },
-                    link: 'https://www.minebbs.com/members/thechuan.41897/'
-                },
+                { icon: icon.minebbs, link: 'https://www.minebbs.com/members/thechuan.41897/' },
                 { icon: 'gmail', link: 'mailto:thechuan1503@1503dev.top' },
                 { icon: 'telegram', link: 'https://m.sd.10086.cn/sd_fe_service/html-yd/index.html' },
                 { icon: icon.language, link: 'https://thechuan1503.1503dev.top' }
@@ -68,9 +66,26 @@ features:
 
     const projects = [
         {
+            avatar: 'https://www.minebbs.com/data/resource_icons/12/12468.jpg',
+            name: 'LeviResidence',
+            title: '强大的，可高度自定义的 LSE 领地插件',
+            links: [
+                { icon: 'github', link: 'https://github.com/1503Dev/LeviResidence' },
+                { icon: icon.minebbs, link: 'https://www.minebbs.com/resources/leviresidence-lse.12468/' }
+            ]
+        },
+        {
+            avatar: '/src/icon/trans.png',
+            name: 'CirclorAlpha',
+            title: '针对安卓 Minecraft: PE 1.16.201 的动态注入式辅助工具(实验项目，摆了)',
+            links: [
+                { icon: 'github', link: 'https://github.com/1503Dev/CirclorAlpha' }
+            ]
+        },
+        {
             avatar: '/src/icon/circlor2.webp',
             name: 'Circlor2',
-            title: '针对安卓 Minecraft: PE 的动态注入式辅助工具',
+            title: '针对安卓 Minecraft: BE 的动态注入式辅助工具(实验项目，摆了)',
             links: [
                 { icon: 'github', link: 'https://github.com/1503Dev/Circlor2' },
                 { icon: icon.language, link: 'https://circlor2.1503dev.top' }
@@ -79,7 +94,7 @@ features:
         {
             avatar: '/src/icon/circlor.png',
             name: 'Circlor',
-            title: '基于 Toolbox for Minecraft: PE 的辅助工具',
+            title: '基于 Toolbox for Minecraft: PE 的辅助工具(摆了)',
             links: [
                 { icon: icon.language, link: 'https://circlor.1503dev.top' }
             ]
@@ -87,7 +102,7 @@ features:
         {
             avatar: '/src/icon/openbr.png',
             name: 'Open Buckshot Routtle',
-            title: 'Buckshot Routtle 的神人开源版本',
+            title: 'Buckshot Routtle 的神人开源版本(摆了)',
             links: [
                 { icon: 'github', link: 'https://github.com/1503Dev/OpenBuckshotRoulette' }
             ]
@@ -102,10 +117,10 @@ features:
         },
         {
             avatar: '/src/icon/trans.png',
-            name: 'horion-dll-archive',
-            title: 'horion.dll 的存档',
+            name: 'Bedrock Dedicated Server Archive',
+            title: 'MCBE 服务器存档',
             links: [
-                { icon: 'github', link: 'https://github.com/1503Dev/horion-dll-archive/' }
+                { icon: 'github', link: 'https://github.com/1503Dev/bedrock-dedicated-server-archive/releases' }
             ]
         }
     ]
