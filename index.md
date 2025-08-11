@@ -3,7 +3,7 @@ layout: home
 
 hero:
     name: 1503Dev
-    tagline: 一个棍母组织
+    _tagline: 一个棍母组织
     actions:
         - theme: brand
           text: Github
@@ -17,11 +17,11 @@ hero:
 
 features:
     - title: 领域
-      details: 任何与技术相关的领域
+      _details: 任何与技术相关的领域
     - title: 宗旨
-      details: 全心全意为棍母服务，对棍母负责，并受棍母监督
+      _details: 全心全意为棍母服务，对棍母负责，并受棍母监督
     - title: 目标
-      details: 宗旨就是目标，目标就是宗旨
+      _details: 宗旨就是目标，目标就是宗旨
 ---
 
 <script setup>
@@ -46,7 +46,7 @@ features:
             links: [
                 { icon: 'github', link: 'https://github.com/thechuan1503' },
                 { icon: 'gitee', link: 'https://gitee.com/thechuan1503' },
-                { icon: icon.minebbs, link: 'https://www.minebbs.com/members/thechuan.41897/' },
+                // { icon: icon.minebbs, link: 'https://www.minebbs.com/members/thechuan.41897/' },
                 { icon: 'gmail', link: 'mailto:thechuan1503@1503dev.top' },
                 { icon: 'telegram', link: 'https://m.sd.10086.cn/sd_fe_service/html-yd/index.html' },
                 { icon: icon.language, link: 'https://thechuan1503.1503dev.top' }
@@ -65,15 +65,6 @@ features:
     ]
 
     const projects = [
-        {
-            avatar: 'https://www.minebbs.com/data/resource_icons/12/12468.jpg',
-            name: 'LeviResidence',
-            title: '强大的，可高度自定义的 LSE 领地插件',
-            links: [
-                { icon: 'github', link: 'https://github.com/1503Dev/LeviResidence' },
-                { icon: icon.minebbs, link: 'https://www.minebbs.com/resources/leviresidence-lse.12468/' }
-            ]
-        },
         {
             avatar: '/src/icon/trans.png',
             name: 'CirclorAlpha',
@@ -137,5 +128,3 @@ features:
 ## Our Team  
 
 <VPTeamMembers size="medium" :members />
-
-<!-- Made by Inkranty -->
