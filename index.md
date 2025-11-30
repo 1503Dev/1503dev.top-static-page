@@ -17,11 +17,11 @@ hero:
 
 features:
     - title: 领域
-      _details: 任何与技术相关的领域
+      details: 安卓开发, 安卓逆向, 前后端
     - title: 宗旨
-      _details: 全心全意为棍母服务，对棍母负责，并受棍母监督
+      details: 棍母棍母棍
     - title: 目标
-      _details: 宗旨就是目标，目标就是宗旨
+      details: 棍母棍母棍母棍母棍母
 ---
 
 <script setup>
@@ -66,26 +66,51 @@ features:
 
     const projects = [
         {
-            avatar: '/src/icon/trans.png',
+            avatar: '/src/icon/alphaim.svg',
+            name: 'AlphaIM',
+            title: 'NodeJS在线即时通讯聊天室',
+            links: [
+                { icon: 'github', link: 'https://github.com/TheChuan1503/AlphaIM' }
+            ]
+        },
+        {
+            avatar: '/src/icon/opentbui_256.svg',
+            name: 'OpenTBUI',
+            title: '基于安卓 Java 仿制的 Toolbox for Minecraft: PE 用户界面',
+            links: [
+                { icon: 'github', link: 'https://github.com/1503Dev/OpenTBUI' },
+                { icon: 'gitee', link: 'https://gitee.com/dev1503/OpenTBUI' }
+            ]
+        },
+        {
+            avatar: '/src/icon/android.png',
+            name: 'PELauncherDemo',
+            title: '我的世界基岩版(安卓)运行前动态注入示例',
+            links: [
+                { icon: 'github', link: 'https://github.com/TheChuan1503/PELauncherDemo' }
+            ]
+        },
+        {
+            avatar: '/src/icon/circloralpha.bmp',
             name: 'CirclorAlpha',
             title: '针对安卓 Minecraft: PE 1.16.201 的动态注入式辅助工具(实验项目，摆了)',
             links: [
                 { icon: 'github', link: 'https://github.com/1503Dev/CirclorAlpha' }
             ]
         },
-        {
-            avatar: '/src/icon/circlor2.webp',
-            name: 'Circlor2',
-            title: '针对安卓 Minecraft: BE 的动态注入式辅助工具(实验项目，摆了)',
-            links: [
-                { icon: 'github', link: 'https://github.com/1503Dev/Circlor2' },
-                { icon: icon.language, link: 'https://circlor2.1503dev.top' }
-            ]
-        },
+        // {
+        //     avatar: '/src/icon/circlor2.webp',
+        //     name: 'Circlor2',
+        //     title: '针对安卓 Minecraft: BE 的动态注入式辅助工具(实验项目，摆了)',
+        //     links: [
+        //         { icon: 'github', link: 'https://github.com/1503Dev/Circlor2' },
+        //         { icon: icon.language, link: 'https://circlor2.1503dev.top' }
+        //     ]
+        // },
         {
             avatar: '/src/icon/circlor.png',
             name: 'Circlor',
-            title: '基于 Toolbox for Minecraft: PE 的辅助工具(摆了)',
+            title: '基于 Toolbox for Minecraft: PE 的辅助工具',
             links: [
                 { icon: icon.language, link: 'https://circlor.1503dev.top' }
             ]
@@ -106,14 +131,14 @@ features:
                 { icon: 'github', link: 'https://github.com/1503Dev/libminecraftpe.so-ida-analysis/' }
             ]
         },
-        {
-            avatar: '/src/icon/trans.png',
-            name: 'Bedrock Dedicated Server Archive',
-            title: 'MCBE 服务器存档',
-            links: [
-                { icon: 'github', link: 'https://github.com/1503Dev/bedrock-dedicated-server-archive/releases' }
-            ]
-        }
+        // {
+        //     avatar: '/src/icon/trans.png',
+        //     name: 'Bedrock Dedicated Server Archive',
+        //     title: 'MCBE 服务器存档',
+        //     links: [
+        //         { icon: 'github', link: 'https://github.com/1503Dev/bedrock-dedicated-server-archive/releases' }
+        //     ]
+        // }
     ]
 </script>
 
