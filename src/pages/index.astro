@@ -1,0 +1,485 @@
+---
+// Layout 配置
+const pageTitle = "1503Dev";
+const tagline = "一个团伙";
+
+const actions = [
+  { theme: "brand", text: "Github", link: "https://github.com/1503Dev" },
+  { theme: "alt", text: "Gitee", link: "https://gitee.com/Dev1503" },
+  {
+    theme: "alt",
+    text: "MineBBS",
+    link: "https://www.minebbs.com/members/dev.154006/",
+  },
+];
+
+const features = [
+  { title: "我们是什么", details: "喜欢逆向和开发的一个团伙" },
+  { title: "我们为了什么", details: "知识共享" },
+  { title: "我们从何而来", details: "1503Dev 自 2023 年以来创立，Inkranty 自 2025.7 加入我们" },
+  { title: "加入我们", details: "向 contact@1503dev.top 发送邮件，提供你的信息" },
+];
+
+// 社交图标 SVG 定义
+const icon = {
+  github: `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`,
+  gitee: `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11.984 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm6.09 5.333c.328 0 .593.266.592.593v1.482a.594.594 0 0 1-.593.592H9.777c-.982 0-1.778.796-1.778 1.778v5.63c0 .327-.266.592-.593.592H5.926a.593.593 0 0 1-.593-.593V9.778c0-2.455 1.99-4.445 4.445-4.445zm-1.185 5.334c.328 0 .593.265.593.592v2.37a4.446 4.446 0 0 1-4.445 4.445H6.518a.593.593 0 0 1-.592-.593v-1.481c0-.328.265-.593.592-.593h6.519c.981 0 1.778-.796 1.778-1.778v-.37H9.777a.593.593 0 0 1-.593-.593v-1.481c0-.328.266-.593.593-.593h7.111z"/></svg>`,
+  gmail: `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.3H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-1.298 1.458-2.057 2.512-1.268L12 11.24l9.488-7.051C22.542 3.4 24 4.159 24 5.457z"/></svg>`,
+  telegram: `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.495-.168.598-.446.798-.66.817-.465.042-.814-.285-1.264-.56-.704-.432-1.102-.701-1.786-1.122-.791-.486-.279-.754.173-1.192.118-.115 2.163-1.854 2.202-2.011.005-.02.01-.093-.035-.13-.044-.038-.108-.025-.156-.015-.067.015-1.135.673-3.2 1.977-.303.197-.577.294-.823.288-.271-.006-.793-.144-1.18-.262-.476-.146-.855-.223-.822-.47.017-.13.206-.263.565-.401 2.21-.902 3.684-1.498 4.42-1.787 2.109-.817 2.548-.959 2.834-.964.063-.001.203.014.294.083.076.059.098.141.106.204.009.071.01.218-.005.37z"/></svg>`,
+  language: `<span class="vpi-social-icon" style="--icon: url('https://api.iconify.design/material-symbols/language.svg'); display: inline-block; width: 20px; height: 20px; background-color: currentColor;"></span>`,
+  minebbs: `<span class="vpi-social-minebbs" style="--icon: url('/src/icon/minebbs.svg'); display: inline-block; width: 20px; height: 20px; background-color: currentColor;"></span>`,
+};
+
+const members = [
+  {
+    avatar: "https://avatars.githubusercontent.com/u/104840099?v=4",
+    name: "TheChuan1503",
+    title: "主人，啥都会点",
+    links: [
+      { icon: "github", link: "https://github.com/thechuan1503" },
+      { icon: "gitee", link: "https://gitee.com/thechuan1503" },
+      { icon: "gmail", link: "mailto:thechuan1503@1503dev.top" },
+      {
+        icon: "telegram",
+        link: "https://m.sd.10086.cn/sd_fe_service/html-yd/index.html",
+      },
+      { icon: "language", link: "https://thechuan1503.1503dev.top" },
+    ],
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/220187068?v=4",
+    name: "天雨墨染",
+    title: "会点前端和Java/Kotlin",
+    links: [
+      { icon: "github", link: "https://github.com/inkranty" },
+      { icon: "gmail", link: "mailto:moranty@1503dev.top" },
+      {
+        icon: "telegram",
+        link: "https://m.sd.10086.cn/sd_fe_service/html-yd/index.html",
+      },
+      { icon: "language", link: "https://inkranty.qzz.io" },
+    ],
+  },
+];
+
+const projects = [
+  {
+    avatar: "/src/icon/trans.png",
+    name: "ArmMem",
+    title: "适用于安卓的 Inline Hook 和内存读写与监控库",
+    links: [{ icon: "github", link: "https://github.com/1503Dev/ArmMem" }],
+  },
+  {
+    avatar: "/src/icon/trans.png",
+    name: "libminecraftpe.so-ida-analysis",
+    title: "libminecraftpe.so 的 i64 文件存档",
+    links: [
+      {
+        icon: "github",
+        link: "https://github.com/1503Dev/libminecraftpe.so-ida-analysis/",
+      },
+    ],
+  },
+  {
+    avatar: "/src/icon/trans.png",
+    name: "PocketLauncher",
+    title: "MCBE versions and native mods manager for Android (摆了)",
+    links: [
+      { icon: "github", link: "https://github.com/1503Dev/pocket-launcher" },
+    ],
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/Mojang/ore-ui/refs/heads/main/logo.png",
+    name: "ore-ui-for-android",
+    title: "安卓OreUI组件库",
+    links: [
+      { icon: "github", link: "https://github.com/1503Dev/ore-ui-for-android" },
+    ],
+  },
+  {
+    avatar: "/src/icon/openbr.png",
+    name: "Open Buckshot Routtle",
+    title: "Buckshot Routtle 的神人开源版本",
+    links: [
+      {
+        icon: "github",
+        link: "https://github.com/1503Dev/OpenBuckshotRoulette",
+      },
+    ],
+  },
+  {
+    avatar: "/src/icon/alphaim.svg",
+    name: "AlphaIM",
+    title: "NodeJS在线即时通讯聊天室",
+    links: [
+      { icon: "github", link: "https://github.com/TheChuan1503/AlphaIM" },
+    ],
+  },
+  {
+    avatar: "/src/icon/opentbui_256.svg",
+    name: "OpenTBUI",
+    title: "基于安卓 Java 仿制的 Toolbox for Minecraft: PE 用户界面",
+    links: [
+      { icon: "github", link: "https://github.com/1503Dev/OpenTBUI" },
+      { icon: "gitee", link: "https://gitee.com/dev1503/OpenTBUI" },
+    ],
+  },
+  {
+    avatar: "/src/icon/android.png",
+    name: "PELauncherDemo",
+    title: "我的世界基岩版(安卓)运行前动态注入示例",
+    links: [
+      {
+        icon: "github",
+        link: "https://github.com/TheChuan1503/PELauncherDemo",
+      },
+    ],
+  },
+  {
+    avatar: "/src/icon/circloralpha.bmp",
+    name: "CirclorAlpha",
+    title:
+      "针对安卓 Minecraft: PE 1.16.201 的动态注入式辅助工具(实验项目，摆了)",
+    links: [
+      { icon: "github", link: "https://github.com/1503Dev/CirclorAlpha" },
+    ],
+  },
+  {
+    avatar: "/src/icon/circlor.png",
+    name: "Circlor",
+    title: "基于 Toolbox for Minecraft: PE 的辅助工具 (已死亡)",
+    links: [{ icon: "language", link: "https://circlor.1503dev.top" }],
+  },
+];
+
+// 服务器端运行日志
+console.log("Made by Inkranty");
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="theme-wrapper">
+      <header class="hero">
+        <h1 class="hero-name">{pageTitle}</h1>
+        <p class="hero-tagline">{tagline}</p>
+        <div class="actions">
+          {
+            actions.map((action) => (
+              <a
+                href={action.link}
+                class={`action-btn ${action.theme}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {action.text}
+              </a>
+            ))
+          }
+        </div>
+      </header>
+
+      <section class="features">
+        <div class="features-grid">
+          {
+            features.map((feat) => (
+              <div class="feature-card">
+                <h3 class="feature-title">{feat.title}</h3>
+                <p class="feature-details">{feat.details}</p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section-container">
+        <h2>Our Projects</h2>
+        <div class="team-grid size-small">
+          {
+            projects.map((proj) => (
+              <div class="member-card">
+                <img src={proj.avatar} alt={proj.name} class="avatar" />
+                <div class="info">
+                  <h4 class="name">{proj.name}</h4>
+                  <p class="title">{proj.title}</p>
+                  <div class="links">
+                    {proj.links.map((link) => (
+                      <a
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={
+                          typeof link.icon === "string" ? link.icon : "link"
+                        }
+                      >
+                        <Fragment
+                          set:html={
+                            typeof link.icon === "string"
+                              ? icon[link.icon]
+                              : link.icon.svg
+                          }
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section-container">
+        <h2>Our Team</h2>
+        <div class="team-grid size-medium">
+          {
+            members.map((member) => (
+              <div class="member-card">
+                <img src={member.avatar} alt={member.name} class="avatar" />
+                <div class="info">
+                  <h4 class="name">{member.name}</h4>
+                  <p class="title">{member.title}</p>
+                  <div class="links">
+                    {member.links.map((link) => (
+                      <a
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={
+                          typeof link.icon === "string" ? link.icon : "link"
+                        }
+                      >
+                        <Fragment
+                          set:html={
+                            typeof link.icon === "string"
+                              ? icon[link.icon]
+                              : link.icon.svg
+                          }
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+    <div class="footer">
+      <p>
+        &copy; 2023-2026 1503Dev. All rights reserved.
+      </p>
+    </div>
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "Bunya Light";
+    src: url("https://static.1503dev.top/font/bunya/1.0/bunya-light.ttf")
+      format("truetype");
+    font-display: swap;
+  }
+  /* 基础与现代暗黑配色方案 (VitePress 核心变量复刻) */
+  :root {
+    --vp-c-brand: #3eaf7c;
+    --vp-c-brand-light: #4abf8a;
+    --vp-c-bg: #1e1e20;
+    --vp-c-bg-soft: #252529;
+    --vp-c-bg-mute: #2f2f35;
+    --vp-c-text-1: rgba(255, 255, 255, 0.92);
+    --vp-c-text-2: rgba(255, 255, 255, 0.6);
+    --font-sans:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  body {
+    background-color: var(--vp-c-bg);
+    color: var(--vp-c-text-1);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .theme-wrapper {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+
+  /* Hero 样式 */
+  .hero {
+    text-align: center;
+    padding: 48px 0;
+  }
+  .hero-name {
+    font-size: 96px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0;
+    background: linear-gradient(315deg, #42d392 25%, #647eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Bunya Light', var(--font-sans);
+  }
+  .hero-tagline {
+    font-size: 24px;
+    color: var(--vp-c-text-2);
+    margin: 16px 0 32px;
+  }
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .action-btn {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0 20px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  .action-btn.brand {
+    background-color: var(--vp-c-brand);
+    color: #fff;
+  }
+  .action-btn.brand:hover {
+    background-color: var(--vp-c-brand-light);
+  }
+  .action-btn.alt {
+    background-color: var(--vp-c-bg-mute);
+    color: var(--vp-c-text-1);
+  }
+  .action-btn.alt:hover {
+    background-color: #3f3f46;
+  }
+
+  /* Features 样式 */
+  .features {
+    margin-top: 64px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 24px;
+  }
+  .feature-card {
+    background-color: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-bg-soft);
+    padding: 24px;
+    border-radius: 12px;
+    height: 100%;
+  }
+  .feature-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+  .feature-details {
+    font-size: 14px;
+    color: var(--vp-c-text-2);
+    margin: 0;
+    line-height: 22px;
+  }
+
+  /* 结构标题 */
+  .section-container {
+    margin-top: 96px;
+  }
+  .section-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--vp-c-bg-mute);
+    padding-bottom: 8px;
+  }
+
+  /* Team & Projects 复刻网格 */
+  .team-grid {
+    display: grid;
+    gap: 24px;
+  }
+  .team-grid.size-small {
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+  }
+  .team-grid.size-medium {
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  }
+
+  .member-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--vp-c-bg-soft);
+    padding: 16px;
+    border-radius: 12px;
+  }
+  .size-small .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .size-medium .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .member-card .info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .member-card .name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .member-card .title {
+    font-size: 13px;
+    color: var(--vp-c-text-2);
+    margin: 0;
+  }
+
+  .member-card .links {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  .member-card .links a {
+    color: var(--vp-c-text-2);
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+  }
+  .member-card .links a:hover {
+    color: var(--vp-c-text-1);
+  }
+
+  /* 蒙版图标支持 */
+  :global(.vpi-social-icon),
+  :global(.vpi-social-minebbs) {
+    mask: var(--icon) no-repeat;
+    -webkit-mask: var(--icon) no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+  }
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    color: var(--vp-c-text-2);
+  }
+</style>
